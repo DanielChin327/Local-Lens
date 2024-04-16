@@ -67,3 +67,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# Additional Gems
+gem 'bcrypt', '~> 3.1.7'
