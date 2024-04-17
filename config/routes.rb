@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'posts#index'
   # Custom routes for user sign up and session management
   get 'signup', to: 'users#new', as: 'signup'   # For user registration form
   post 'signup', to: 'users#create'            # To handle form submission for registration
@@ -15,4 +16,6 @@ Rails.application.routes.draw do
 
   # RESTful routes for users
   resources :users, only: [:show, :new, :create]
+
+  resources :posts
 end
